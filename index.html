@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AgroChaco - Gestión Económica y Rentabilidad Integral</title>
+  <meta name="description" content="Sistema de cálculo de márgenes brutos, rindes de indiferencia y rentabilidad agropecuaria para Pampa del Infierno, Chaco">
+
+  <!-- Tipografías de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos Principales -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra Superior de Navegación -->
+  <header class="top-header">
+    <div class="header-content">
+      <div class="brand-section">
+        <div class="brand-logo">🌾</div>
+        <div class="brand-info">
+          <h1 id="header-establecimiento">Establecimiento Don Alberto</h1>
+          <span>Pampa del Infierno, Chaco · Campaña 2026/27</span>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <div class="header-badge">
+          <span>Moneda:</span>
+          <select id="global-moneda" style="width: auto; padding: 4px 6px; font-weight: 700;">
+            <option value="USD">USD (Dólares)</option>
+            <option value="ARS">ARS (Pesos Arg)</option>
+          </select>
+        </div>
+        <button class="btn btn-sm" id="btn-imprimir">
+          📄 Imprimir / PDF
+        </button>
+        <button class="btn btn-sm btn-danger" id="btn-reset">
+          ↺ Reset Chaco
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor Principal de la Aplicación -->
+  <div class="app-container">
+
+    <!-- Navegación de Pestañas -->
+    <nav class="nav-tabs" aria-label="Navegación principal">
+      <button class="nav-tab-btn active" data-tab="tab-consolidado">
+        🏢 Tablero Consolidado
+      </button>
+      <button class="nav-tab-btn" data-tab="tab-agricultura">
+        🌾 Agricultura (Lotes y Cultivos)
+      </button>
+      <button class="nav-tab-btn" data-tab="tab-ganaderia">
+        🐂 Ganadería de Cría
+      </button>
+      <button class="nav-tab-btn" data-tab="tab-graficos">
+        📊 Gráficos y Participación
+      </button>
+      <button class="nav-tab-btn" data-tab="tab-config">
+        ⚙️ Configuración & Datos
+      </button>
+    </nav>
+
+    <!-- Contenido de las Pestañas -->
+    <main>
+      <!-- 1. Pestaña Consolidado -->
+      <section id="tab-consolidado" class="tab-content active"></section>
+
+      <!-- 2. Pestaña Agricultura -->
+      <section id="tab-agricultura" class="tab-content"></section>
+
+      <!-- 3. Pestaña Ganadería -->
+      <section id="tab-ganaderia" class="tab-content"></section>
+
+      <!-- 4. Pestaña Gráficos -->
+      <section id="tab-graficos" class="tab-content"></section>
+
+      <!-- 5. Pestaña Configuración -->
+      <section id="tab-config" class="tab-content"></section>
+    </main>
+
+  </div>
+
+  <!-- Contenedor de Alertas Toast -->
+  <div id="toast-container"></div>
+
+  <!-- Scripts del Sistema -->
+  <script src="js/calculations.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
